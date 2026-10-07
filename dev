@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Club</title>
+    <style>
+    @import url('https://googleapis.com/');
+
+    #member-section {
+        margin-top: 15px;
+    }
+    :root {
+        --font-retro: 'Press Start 2P', system-ui;
+        --bg-color: #121214;
+        --text-color: #e1e1e6;
+        --primary-color: #00ff66;
+        --primary-hover: #00cc52;
+    }
+
+    html, body, button{
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        font-smoothing: none;
+        text-rendering: optimizeSpeed;
+        image-rendering: pixelated;
+    }
+
+    body{
+        font-family: var(--font-retro);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 2;
+        font-size: 12px;
+        margin: 3rem auto;
+        max-width: 700px;
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    ul {
+        list-style-type: ">> ";
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 0.75rem;
+    }
+
+    .btn{
+        font-family: var(--font-retro);
+        font-size: 12px;
+        font-weight: bold;
+        background-color: var(--primary-color);
+        color: #121214;
+        border: 4px solid #ffffff;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        box-shadow: 4px 4px 0px #555555;
+    }
+
+    .btn:hover {
+        background-color: var(--primary-hover);
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #555555;
+    }
+
+    .btn:active {
+        transform: translate(4px, 4px);
+        box-shadow: 0px 0px 0px #555555;
+    }
+
+    .is-hidden {
+        display: none !important;
+    }
+</style>
+</head>
+<body>
+    <h1>Welcome to the Computer Science Club's Website</h1>
+    <p>My name is John Doe and I am the founder of the computer science club.</p>
+    <p>The Computer Science Club consist of around 10 members.</p>
+
+    <br><br>
+
+   <button id="toggle-btn" class="btn">Click here to meet the members</button>"
+    
+   <div id="member-section" class="is-hidden">
+    <h2>Members</h2>
+        <ul>
+            <li>John Doe - Founder</li>
+            <li>Jack - Vice President</li>
+            <li>Landon - Treasurer</li>
+            <li>Davis - Secretary</li>
+            <li>David Wilson - Member</li>
+            <li>Sarah Brown - Member</li>
+            <li>James Taylor - Member</li>
+            <li>Olivia Anderson - Member</li>
+            <li>William Thomas - Member</li>
+            <li>Ava Martinez - Member</li>
+        </ul>
+    </div>
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtn = document.getElementById("toggle-btn");
+            const memberSection = document.getElementById("member-section");
+
+            toggleBtn.addEventListener("click", function() {
+                memberSection.classList.toggle("is-hidden");
+            });
+        });
+    </script>
+</body>
+</html>
